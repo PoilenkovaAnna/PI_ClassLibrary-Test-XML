@@ -38,6 +38,8 @@ namespace Consol
             Console.WriteLine(s);
             s = all.Age_Weig(my2);
             Console.WriteLine(s);
+            s = all.Age_Weig(p);
+            Console.WriteLine(s);
 
             //ищем имена на букву
             string w;

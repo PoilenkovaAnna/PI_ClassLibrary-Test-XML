@@ -133,7 +133,7 @@ namespace ClassLibrary1
         /// </summary>
         /// <param name="s">name</param>
         /// <returns></returns>
-        public string Sort(string  s)
+        public void Sort(string  s)
         {
             List<string> NameS = new List<string>();
             //LINQ метод
@@ -141,10 +141,13 @@ namespace ClassLibrary1
                                 where t.name.ToUpper().StartsWith(s) //фильтрация по критерию
                                 orderby t.name  // упорядочиваем по возрастанию
                                 select t.name; // выбираем объект
-            foreach (var x in selectedTeams)
+            foreach (var x in selectedTeams) 
                 NameS.Add(x);
-            Console.WriteLine(NameS[0]);
-            return NameS[0];
+
+            for (int i = 0; i < NameS.Count(); i++)
+                Console.WriteLine(NameS[i]);
+
+            //return NameS[0];
 
         }
 
